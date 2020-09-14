@@ -118,7 +118,7 @@ header {
 }
 
 .logo {
-    background: url("../images/profile-pic.jpg");
+    background: url("../images/rosie.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,7 +157,6 @@ header {
     height: 120px;
     text-align: center;
     padding: 0;
-    
 }
 
 .menuitem a {
