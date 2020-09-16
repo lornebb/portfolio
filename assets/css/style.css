@@ -69,6 +69,15 @@ body {
     color: #555555;
 }
 
+/*--------------------------------------------Display on load*/
+
+#resume-section,
+#contact-section,
+#interests-section,
+#github-section {
+    display: none;
+}
+
 
 /*--------------------------------------------Special Paddings/Margins/Text*/
 
