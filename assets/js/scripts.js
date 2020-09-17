@@ -129,53 +129,54 @@ $(document).ready(function () {
 //         });
 // }
 
-$(document).ready(fetchGitHubInformation);
+// $(document).ready(fetchGitHubInformation);
 
 /** 
  * Google Maps - will display locations on the site and respond to user query in real time
  * */
-function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 3,
-        center: {
-            lat: 46.619261,
-            lng: -33.134766
-        }
-    });
+// function initMap() {
+//     var map = new google.maps.Map(document.getElementById("map"), {
+//         zoom: 3,
+//         center: {
+//             lat: 46.619261,
+//             lng: -33.134766
+//         }
+//     });
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//     var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    var locations = [{
-            lat: 40.785091,
-            lng: -73.968285
-        },
-        {
-            lat: 41.084045,
-            lng: -73.874245
-        },
-        {
-            lat: 40.754932,
-            lng: -73.984016
-        }
-    ];
+//     var locations = [{
+//             lat: 40.785091,
+//             lng: -73.968285
+//         },
+//         {
+//             lat: 41.084045,
+//             lng: -73.874245
+//         },
+//         {
+//             lat: 40.754932,
+//             lng: -73.984016
+//         }
+//     ];
 
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-        });
-    });
+//     var markers = locations.map(function (location, i) {
+//         return new google.maps.Marker({
+//             position: location,
+//             label: labels[i % labels.length]
+//         });
+//     });
 
-    var markerCluster = new MarkerClusterer(map, markers, {
-        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-    });
-}
+//     var markerCluster = new MarkerClusterer(map, markers, {
+//         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+//     });
+// }
 
 /** 
  * sendMail will provide the user with an opportunity to communicate directly with the developer.
  * */
 function sendMail(contactForm) {
-    emailjs.send("gmail", "rosie", {
+    emailjs.init('user_NLgvc4Mu5hpwy6V4uUBBn')
+    emailjs.send("lorneashley_gmail_com","labb-portfolio-contact", {
             "from_name": contactForm.name.value,
             "from_email": contactForm.emailaddress.value,
             "project_request": contactForm.projectsummary.value
@@ -189,4 +190,4 @@ function sendMail(contactForm) {
             }
         );
     return false; // To block from loading a new page
-}
+};
